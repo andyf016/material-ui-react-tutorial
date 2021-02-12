@@ -8,8 +8,17 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import TextField from "@material-ui/core/TextField"
 import { makeStyles, ThemeProvider, createMuiTheme} from "@material-ui/core/styles"
 import { orange } from '@material-ui/core/colors'
+import 'fontsource-roboto'
+
+import Typography from '@material-ui/core/Typography'
 
 const theme = createMuiTheme({
+  typography:{
+    h2: {
+      fontSize: 34,
+      marginBottom: 15
+    }
+  },
   palette:{
     primary: {
       main: orange[500],
@@ -58,6 +67,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <div className='App'>
+      <Typography variant="h2" component="div">
+        Typography
+      </Typography>
+      <Typography variant="subtitle">
+        Material UI Tutorial
+      </Typography><br/>
       <ButtonStyled /> <br/>
       <TextField
         variant='filled'
