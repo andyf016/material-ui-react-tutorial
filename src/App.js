@@ -5,6 +5,8 @@ import SaveIcon from "@material-ui/icons/Save";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import TextField from "@material-ui/core/TextField"
+
 
 function CheckboxExample() {
   const [checked, setChecked] = useState(true);
@@ -30,6 +32,13 @@ function CheckboxExample() {
 function App() {
   return (
     <div className='App'>
+      <TextField
+        variant='filled'
+        color='primary'
+        type='email'
+        label='you@you.com'
+        
+      />
       <CheckboxExample />
       <ButtonGroup>
         <Button startIcon={<SaveIcon />} variant='contained' color='primary'>
