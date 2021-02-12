@@ -21,6 +21,11 @@ import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
+import AppBar from '@material-ui/core/AppBar'
+import ToolBar from '@material-ui/core/ToolBar'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+
 const theme = createMuiTheme({
   typography: {
     h2: {
@@ -78,6 +83,17 @@ function App() {
       <Container maxWidth='xs'>
         <div className='App'>
           <header className='App-header'>
+            <AppBar>
+              <ToolBar>
+                <IconButton>
+                  <MenuIcon />
+                  <Typography variant="h6">
+                  MUI Theming
+                  </Typography>
+                  <Button>Login</Button>
+                </IconButton>
+              </ToolBar>
+            </AppBar>
             <Typography variant='h2' component='div'>
               Typography
             </Typography>
@@ -92,27 +108,27 @@ function App() {
         
       /> */}
             <Grid container spacing={4} justify="center">
-              <Grid item>
+              <Grid item xs={3} sm={6}>
                 <Paper
                   style={{
                     height: 75,
-                    width: 50,
+                    width: '100%',
                   }}
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={3} sm={6}>
                 <Paper
                   style={{
                     height: 75,
-                    width: 50,
+                    width: '100%',
                   }}
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={3} sm={6}>
                 <Paper
                   style={{
                     height: 75,
-                    width: 50,
+                    width: '100%',
                   }}
                 />
               </Grid>
